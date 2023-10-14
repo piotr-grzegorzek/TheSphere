@@ -1,5 +1,4 @@
 using UnityEngine;
-using Dictionaries;
 
 public class PlayerScoreController : MonoBehaviour
 {
@@ -9,10 +8,7 @@ public class PlayerScoreController : MonoBehaviour
 
     public int Score
     {
-        get
-        {
-            return _score;
-        }
+        get => _score;
         set
         {
             _score = value;
@@ -26,7 +22,7 @@ public class PlayerScoreController : MonoBehaviour
 
     void Start()
     {
-        GameObject pointsObject = GameObject.Find(GAME_OBJECT.POINTS);
+        GameObject pointsObject = GameObject.Find(Dictionaries.GameObject.Points);
         if (pointsObject == null)
         {
             Debug.LogWarning("Points game object not found");

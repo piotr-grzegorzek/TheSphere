@@ -15,7 +15,7 @@ public class PlayerMovementController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    void Update()
     {
         // Input can be configured in Edit > Project Settings > Input Manager > Axes
         // According to docs they are framerate independent, so no time.deltaTime needed
@@ -25,7 +25,7 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(_moveX, 0.0f, _moveZ);
+        Vector3 movement = new(_moveX, 0.0f, _moveZ);
         _rb.AddForce(movement * Speed);
     }
 }

@@ -1,7 +1,7 @@
 namespace Dictionaries
 {
-    public static class TAG
+    public static class Tag
     {
-        public const string PLAYER = "Player";
+        public const string Player = "Player";
     }
 }

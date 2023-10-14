@@ -1,5 +1,4 @@
 using UnityEngine;
-using Dictionaries;
 
 public class Collectible : MonoBehaviour
 {
@@ -8,12 +7,12 @@ public class Collectible : MonoBehaviour
     void Update()
     {
         // Time.deltaTime to make it framerate independent
-        transform.Rotate(new Vector3(30, 20, 0) * RotationSpeed * Time.deltaTime);
+        transform.Rotate(RotationSpeed * Time.deltaTime * new Vector3(30, 20, 0));
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(TAG.PLAYER))
+        if (other.CompareTag(Dictionaries.Tag.Player))
         {
             var psc = other.gameObject.GetComponent<PlayerScoreController>();
             psc.Score++;
