@@ -4,21 +4,28 @@ public class PlayerMovementController : MonoBehaviour
 {
     private Rigidbody _rb;
 
-    public float Thrust = 5.0f;
+    private float _moveX;
+
+    private float _moveZ;
+
+    public float Speed = 5.0f;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    private void Update()
     {
         // Input can be configured in Edit > Project Settings > Input Manager > Axes
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        // According to docs they are framerate independent, so no time.deltaTime needed
+        _moveX = Input.GetAxis("Horizontal");
+        _moveZ = Input.GetAxis("Vertical");
+    }
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-        _rb.AddForce(movement * Thrust);
+    void FixedUpdate()
+    {
+        Vector3 movement = new Vector3(_moveX, 0.0f, _moveZ);
+        _rb.AddForce(movement * Speed);
     }
 }
