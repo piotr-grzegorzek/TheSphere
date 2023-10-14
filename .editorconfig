@@ -155,10 +155,10 @@ csharp_style_implicit_object_creation_when_type_is_apparent = true:warning
 csharp_style_var_elsewhere = true:warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_style_var_for_built_in_types
-# csharp_style_var_for_built_in_types = false:warning
+csharp_style_var_for_built_in_types = false:warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_style_var_when_type_is_apparent
-# csharp_style_var_when_type_is_apparent = false:warning
+csharp_style_var_when_type_is_apparent = false:warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#dotnet_sort_system_directives_first
 dotnet_sort_system_directives_first = true
