@@ -4,13 +4,13 @@ namespace Player
 {
     public class MovementController : MonoBehaviour
     {
+        public float Speed = 5.0f;
+        
         private Rigidbody _rb;
 
         private float _moveX;
 
         private float _moveZ;
-
-        public float Speed = 5.0f;
 
         void Start()
         {
