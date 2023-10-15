@@ -395,10 +395,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 634797934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b4a54addcec1b46af33ee927e585b0, type: 3}
+  m_Script: {fileID: 11500000, guid: d115daa829d00cf43bcd6710a89b6496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Thrust: 5
+  Speed: 5
 --- !u!54 &634797940
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 634797934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcd26500bd366564c9d3696967c47844, type: 3}
+  m_Script: {fileID: 11500000, guid: 388190ab1d0fea249987890e5b54440e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &705507993
