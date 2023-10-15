@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerMovementController : MonoBehaviour
+    public class MovementController : MonoBehaviour
     {
         private Rigidbody _rb;
 

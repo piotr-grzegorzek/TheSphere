@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerScoreController : MonoBehaviour
+    public class ScoreController : MonoBehaviour
     {
         private int _totalPoints;
 

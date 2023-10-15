@@ -1,5 +1,4 @@
 using UnityEngine;
-using Player;
 
 public class Collectible : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag(Constants.Tag.Player))
         {
-            var psc = other.gameObject.GetComponent<PlayerScoreController>();
+            var psc = other.gameObject.GetComponent<Player.ScoreController>();
             psc.Score++;
 
             gameObject.SetActive(false);
