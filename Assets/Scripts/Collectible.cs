@@ -1,4 +1,5 @@
 using UnityEngine;
+using Player;
 
 public class Collectible : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(Dictionaries.Tag.Player))
+        if (other.CompareTag(Constants.Tag.Player))
         {
             var psc = other.gameObject.GetComponent<PlayerScoreController>();
             psc.Score++;

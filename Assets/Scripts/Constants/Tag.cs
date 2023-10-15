@@ -1,4 +1,4 @@
-namespace Dictionaries
+namespace Constants
 {
     public static class Tag
     {
