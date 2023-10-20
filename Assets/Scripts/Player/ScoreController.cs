@@ -1,3 +1,4 @@
+/* TODO: Decouple */
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,14 +34,14 @@ namespace Player
             GameObject pointsObject = GameObject.Find(Constants.GameObject.Points);
             if (pointsObject == null)
             {
-                Debug.LogWarning("Points game object not found");
+                Debug.Log("Points game object not found, total points will not be calculated");
             }
             else
             {
                 _totalPoints = pointsObject.transform.childCount;
                 if (_totalPoints == 0)
                 {
-                    Debug.LogWarning("No points found in the points game object");
+                    Debug.Log("No points found in the points game object");
                 }
             }
         }
@@ -63,7 +64,7 @@ namespace Player
                     InfoText.text = "You won!";
                     break;
                 default:
-                    Debug.LogWarning("Unknown scene name: " + sceneName);
+                    Debug.Log($"Unknown scene name: {sceneName}, cannot load scene");
                     break;
             }
         }

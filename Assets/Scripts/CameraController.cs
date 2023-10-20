@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
         _playerObject = GameObject.Find(Constants.GameObject.Player);
         if (_playerObject == null)
         {
-            Debug.LogWarning("Player game object not found");
+            Debug.Log("Player game object not found, distance will not be calculated");
         }
         else
         {
