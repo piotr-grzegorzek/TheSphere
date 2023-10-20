@@ -1,9 +1,14 @@
+using TMPro;
 using UnityEngine;
 
 namespace Player
 {
     public class ScoreController : MonoBehaviour
     {
+        public TMP_Text ScoreText;
+
+        public TMP_Text InfoText;
+
         private int _totalPoints;
 
         private int _score;
@@ -15,9 +20,11 @@ namespace Player
             {
                 _score = value;
                 Debug.Log(_score);
+                ScoreText.text = "Score: " + _score;
                 if (WinConditionMet())
                 {
                     Debug.Log("Won");
+                    InfoText.text = "You won!";
                 }
             }
         }
