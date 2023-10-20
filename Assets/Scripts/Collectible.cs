@@ -18,7 +18,6 @@ public class Collectible : MonoBehaviour
             psc.Score++;
 
             gameObject.SetActive(false);
-            Debug.Log("Collected");
         }
     }
 }

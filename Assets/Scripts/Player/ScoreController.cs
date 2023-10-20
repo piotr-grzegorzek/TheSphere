@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
@@ -19,12 +20,10 @@ namespace Player
             set
             {
                 _score = value;
-                Debug.Log(_score);
                 ScoreText.text = "Score: " + _score;
                 if (WinConditionMet())
                 {
-                    Debug.Log("Won");
-                    InfoText.text = "You won!";
+                    WinRouter();
                 }
             }
         }
@@ -49,6 +48,24 @@ namespace Player
         private bool WinConditionMet()
         {
             return _score == _totalPoints;
+        }
+
+        private void WinRouter()
+        {
+            string sceneName = SceneManager.GetActiveScene().name;
+            switch (sceneName)
+            {
+                case Constants.Scene.Level1:
+                    _score = 0;
+                    SceneManager.LoadScene(Constants.Scene.Level2);
+                    break;
+                case Constants.Scene.Level2:
+                    InfoText.text = "You won!";
+                    break;
+                default:
+                    Debug.LogWarning("Unknown scene name: " + sceneName);
+                    break;
+            }
         }
     }
 }
