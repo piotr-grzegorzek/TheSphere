@@ -4,7 +4,7 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(Constants.Scene.Level1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 
     public void ShowOptions()
