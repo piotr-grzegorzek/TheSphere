@@ -1,4 +1,3 @@
-/* TODO: Decouple */
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,10 +20,10 @@ namespace Player
             set
             {
                 _score = value;
-                ScoreText.text = "Score: " + _score;
-                if (WinConditionMet())
+                ScoreText.text = $"Score: {_score}/{_totalPoints}";
+                if (LevelUpConditionMet())
                 {
-                    WinRouter();
+                    LevelUp();
                 }
             }
         }
@@ -44,27 +43,27 @@ namespace Player
                     Debug.Log("No points found in the points game object");
                 }
             }
+            ScoreText.text = $"Score: {_score}/{_totalPoints}";
         }
 
-        private bool WinConditionMet()
+        private bool LevelUpConditionMet()
         {
             return _score == _totalPoints;
         }
 
-        private void WinRouter()
+        private void LevelUp()
         {
-            string sceneName = SceneManager.GetActiveScene().name;
-            switch (sceneName)
+            int sceneID = SceneManager.GetActiveScene().buildIndex;
+            switch (sceneID)
             {
-                case Constants.Scene.Level1:
-                    _score = 0;
-                    SceneManager.LoadScene(Constants.Scene.Level2);
+                case 1:
+                    SceneManager.LoadScene(2);
                     break;
-                case Constants.Scene.Level2:
+                case 2:
                     InfoText.text = "You won!";
                     break;
                 default:
-                    Debug.Log($"Unknown scene name: {sceneName}, cannot load scene");
+                    Debug.Log($"LevelUp() called in scene {sceneID} which is not supported");
                     break;
             }
         }
