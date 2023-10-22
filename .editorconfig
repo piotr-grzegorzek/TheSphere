@@ -211,6 +211,9 @@ insert_final_newline = false
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#tab_width
 tab_width = 4
 
+# unused variables
+csharp_style_unused_value_assignment_preference = discard_variable:warning
+
 # private
 dotnet_naming_rule.private_members_with_underscore.symbols  = private_fields
 dotnet_naming_rule.private_members_with_underscore.style    = prefix_underscore
