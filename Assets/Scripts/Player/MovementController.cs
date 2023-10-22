@@ -4,8 +4,8 @@ namespace Player
 {
     public class MovementController : MonoBehaviour
     {
-        public float Speed = 5.0f;
-        
+        public float Thrust = 5.0f;
+
         private Rigidbody _rb;
 
         private float _moveX;
@@ -28,7 +28,7 @@ namespace Player
         void FixedUpdate()
         {
             Vector3 movement = new(_moveX, 0.0f, _moveZ);
-            _rb.AddForce(movement * Speed);
+            _rb.AddForce(movement * Thrust);
         }
     }
 }
