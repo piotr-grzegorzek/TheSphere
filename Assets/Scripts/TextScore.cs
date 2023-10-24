@@ -12,6 +12,7 @@ public class TextScore : MonoBehaviour
         var player = GameObject.FindWithTag(Constants.Tags.Player);
         _ps = player.GetComponent<Player.Score>();
         _ps.ChangeEvent += UpdateScoreText;
+        UpdateScoreText();
     }
 
     private void UpdateScoreText()

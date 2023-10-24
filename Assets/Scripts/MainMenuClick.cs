@@ -1,19 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class MainMenuClick : MonoBehaviour
 {
-    public void StartGame()
+    public void Run()
     {
         SceneManager.LoadScene(1);
     }
 
-    public void ShowOptions()
+    public void Options()
     {
-        Debug.Log("Show options");
+        Debug.Log("Options");
     }
 
-    public void ExitGame()
+    public void Quit()
     {
         Application.Quit();
     }
