@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 414653195761613022}
   - component: {fileID: 4405553617302357680}
   m_Layer: 5
-  m_Name: InfoText
+  m_Name: TextInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 1695324879400199834}
   - component: {fileID: 6376509268130946916}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: TextScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,4 +384,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84058526235facd44893618f48a79088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}

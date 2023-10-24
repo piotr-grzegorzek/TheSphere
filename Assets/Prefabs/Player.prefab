@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3763835569133360005}
   - component: {fileID: 95684991281382897}
   - component: {fileID: 8204606080901417159}
-  - component: {fileID: 2371510232900342876}
-  - component: {fileID: 6925750850297724096}
+  - component: {fileID: 8703851235764222335}
+  - component: {fileID: 3581553514709678553}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -135,7 +135,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2371510232900342876
+--- !u!114 &8703851235764222335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Thrust: 5
---- !u!114 &6925750850297724096
+--- !u!114 &3581553514709678553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,5 +160,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388190ab1d0fea249987890e5b54440e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 0}
-  InfoText: {fileID: 0}

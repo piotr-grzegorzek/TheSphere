@@ -1,4 +1,5 @@
 using UnityEngine;
+using Player = Scripts.Player;
 
 public class Collectible : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<Player.ScoreController>().ChangeBy(+1);
+        other.gameObject.GetComponent<Player.Score>().ChangeBy(+1);
         // pickUpSound.Play();
         GetComponent<MeshRenderer>().enabled = false;
         gameObject.SetActive(false);

@@ -1,4 +1,4 @@
-namespace Constants
+namespace Scripts.Constants
 {
     public static class Tags
     {
