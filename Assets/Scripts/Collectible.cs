@@ -12,12 +12,9 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == Constants.Tags.Player)
-        {
-            var psc = other.gameObject.GetComponent<Player.ScoreController>();
-            psc.Score++;
-
-            gameObject.SetActive(false);
-        }
+        other.gameObject.GetComponent<Player.ScoreController>().ChangeBy(+1);
+        // pickUpSound.Play();
+        GetComponent<MeshRenderer>().enabled = false;
+        gameObject.SetActive(false);
     }
 }

@@ -1,8 +1,20 @@
 root = true
 
 [*.cs]
+#UNT0001: Unity messages are called by the runtime even if they're empty. Remove them to avoid unnecessary processing.
+dotnet_diagnostic.UNT0001.severity = warning
+
 # UNT0008: Null propagation on Unity objects
 dotnet_diagnostic.UNT0008.severity = warning
+
+# IDE0005: Using directive is unnecessary
+dotnet_diagnostic.IDE0005.severity = warning
+
+# IDE0044: Add readonly modifier
+dotnet_diagnostic.IDE0044.severity = warning
+
+# IDE0051: Remove unused private members
+dotnet_diagnostic.IDE0052.severity = warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_indent_block_contents
 csharp_indent_block_contents = true
@@ -155,13 +167,13 @@ csharp_style_throw_expression = true:warning
 csharp_style_implicit_object_creation_when_type_is_apparent = true:warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_style_var_elsewhere
-csharp_style_var_elsewhere = true:warning
+csharp_style_var_elsewhere = false:warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_style_var_for_built_in_types
 csharp_style_var_for_built_in_types = false:warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_style_var_when_type_is_apparent
-csharp_style_var_when_type_is_apparent = false:warning
+csharp_style_var_when_type_is_apparent = true:warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#dotnet_sort_system_directives_first
 dotnet_sort_system_directives_first = true

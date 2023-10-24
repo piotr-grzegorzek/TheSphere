@@ -8,12 +8,12 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        _player = GameObject.FindGameObjectWithTag(Constants.Tags.Player).transform;
+        _player = GameObject.FindWithTag(Constants.Tags.Player).transform;
         _distance = _player.position - transform.position;
     }
 
     void Update()
     {
-        gameObject.transform.position = _player.position - _distance;
+        transform.position = _player.position - _distance;
     }
 }

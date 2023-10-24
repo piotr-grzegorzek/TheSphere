@@ -8,9 +8,7 @@ namespace Player
 
         private Rigidbody _rb;
 
-        private float _moveX;
-
-        private float _moveZ;
+        private Vector3 _movement;
 
         void Start()
         {
@@ -21,14 +19,13 @@ namespace Player
         {
             // Input can be configured in Edit > Project Settings > Input Manager > Axes
             // According to docs they are framerate independent, so no time.deltaTime needed
-            _moveX = Input.GetAxis("Horizontal");
-            _moveZ = Input.GetAxis("Vertical");
+            _movement.x = Input.GetAxis("Horizontal");
+            _movement.z = Input.GetAxis("Vertical");
         }
 
         void FixedUpdate()
         {
-            Vector3 movement = new(_moveX, 0.0f, _moveZ);
-            _rb.AddForce(movement * Thrust);
+            _rb.AddForce(_movement * Thrust);
         }
     }
 }
