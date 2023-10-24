@@ -1,6 +1,9 @@
 root = true
 
 [*.cs]
+# UNT0008: Null propagation on Unity objects
+dotnet_diagnostic.UNT0008.severity = warning
+
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_indent_block_contents
 csharp_indent_block_contents = true
 

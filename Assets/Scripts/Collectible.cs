@@ -12,7 +12,7 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == Constants.GameObject.Player)
+        if (other.name == Constants.Tags.Player)
         {
             var psc = other.gameObject.GetComponent<Player.ScoreController>();
             psc.Score++;
