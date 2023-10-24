@@ -6,14 +6,7 @@ namespace Player
     {
         public float Thrust = 5.0f;
 
-        private Rigidbody _rb;
-
         private Vector3 _movement;
-
-        void Start()
-        {
-            _rb = GetComponent<Rigidbody>();
-        }
 
         void Update()
         {
@@ -25,7 +18,7 @@ namespace Player
 
         void FixedUpdate()
         {
-            _rb.AddForce(_movement * Thrust);
+            GetComponent<Rigidbody>().AddForce(_movement * Thrust);
         }
     }
 }
