@@ -1,7 +1,5 @@
 using TMPro;
 using UnityEngine;
-using Constants = Scripts.Constants;
-using Player = Scripts.Player;
 
 public class TextScore : MonoBehaviour
 {
@@ -9,8 +7,7 @@ public class TextScore : MonoBehaviour
 
     void Start()
     {
-        var player = GameObject.FindWithTag(Constants.Tags.Player);
-        _ps = player.GetComponent<Player.Score>();
+        _ps = GameObject.FindWithTag(Tags.Player).GetComponent<Player.Score>();
         _ps.ChangeEvent += UpdateScoreText;
         UpdateScoreText();
     }

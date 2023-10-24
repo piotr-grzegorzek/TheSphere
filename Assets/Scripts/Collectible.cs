@@ -1,14 +1,15 @@
 using UnityEngine;
-using Player = Scripts.Player;
 
 public class Collectible : MonoBehaviour
 {
     public float RotationSpeed = 1.0f;
 
+    public Vector3 RotationAxis = new(30, 20, 0);
+
     void Update()
     {
         // Time.deltaTime to make it framerate independent
-        transform.Rotate(RotationSpeed * Time.deltaTime * new Vector3(30, 20, 0));
+        transform.Rotate(RotationSpeed * Time.deltaTime * RotationAxis);
     }
 
     void OnTriggerEnter(Collider other)
