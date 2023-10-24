@@ -14,9 +14,6 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (_player != null)
-        {
-            gameObject.transform.position = _player.position - _distance;
-        }
+        gameObject.transform.position = _player.position - _distance;
     }
 }
