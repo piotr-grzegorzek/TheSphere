@@ -2,28 +2,28 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private GameObject _playerObject;
+    private GameObject _player;
 
     private Vector3 _distance;
 
     void Start()
     {
-        _playerObject = GameObject.Find(Constants.GameObject.Player);
-        if (_playerObject == null)
+        _player = GameObject.Find(Constants.GameObject.Player);
+        if (_player == null)
         {
             Debug.Log("Player game object not found, distance will not be calculated");
         }
         else
         {
-            _distance = _playerObject.transform.position - transform.position;
+            _distance = _player.transform.position - transform.position;
         }
     }
 
     void Update()
     {
-        if (_playerObject != null)
+        if (_player != null)
         {
-            gameObject.transform.position = _playerObject.transform.position - _distance;
+            gameObject.transform.position = _player.transform.position - _distance;
         }
     }
 }

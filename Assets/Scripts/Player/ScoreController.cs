@@ -30,14 +30,14 @@ namespace Player
 
         void Start()
         {
-            GameObject pointsObject = GameObject.Find(Constants.GameObject.Points);
-            if (pointsObject == null)
+            GameObject points = GameObject.Find(Constants.GameObject.Points);
+            if (points == null)
             {
                 Debug.Log("Points game object not found, total points will not be calculated");
             }
             else
             {
-                _totalPoints = pointsObject.transform.childCount;
+                _totalPoints = points.transform.childCount;
                 if (_totalPoints == 0)
                 {
                     Debug.Log("No points found in the points game object");
