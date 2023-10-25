@@ -16,12 +16,16 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag(Tags.Player))
         {
-            other.gameObject.GetComponent<Player.Score>().ChangeBy(+1);
-
-            GetComponent<AudioSource>().Play();
+            GetComponent<Collider>().enabled = false;
             GetComponent<MeshRenderer>().enabled = false;
-            // Delay the set active to let the sound play
+            GetComponent<AudioSource>().Play();
+
+            // Delay the set active to let the sound play after normal collection
             Invoke(nameof(DelayedCollect), 2.0f);
+
+            // Scene might change and sound might be cut off
+            // Coroutines could be used but they are too slow (probably because of the Player.Score component)
+            other.gameObject.GetComponent<Player.Score>().ChangeBy(+1);
         }
     }
 
