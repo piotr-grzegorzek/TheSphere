@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TextInfo
   - Points
+  - Music
   layers:
   - Default
   - TransparentFX
