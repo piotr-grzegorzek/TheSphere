@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,8 +26,7 @@ public class GameManager : MonoBehaviour
                     SceneManager.LoadScene(2);
                     break;
                 case 2:
-                    TextMeshProUGUI textInfo = GameObject.FindWithTag(Tags.TextInfo).GetComponent<TextMeshProUGUI>();
-                    textInfo.text = "You won!";
+                    SceneManager.LoadScene(3);
                     break;
                 default:
                     Debug.Log($"LevelUp() called in scene {sceneID} which is not supported");
