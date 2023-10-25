@@ -1459,6 +1459,10 @@ PrefabInstance:
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 1738040903}
+    - target: {fileID: 8703851235764222335, guid: 4b3e2726124a71f438f215d23199bfe9, type: 3}
+      propertyPath: JumpForce
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
