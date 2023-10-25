@@ -9,10 +9,7 @@ namespace Player
 
         private int _score;
 
-        public int Get()
-        {
-            return _score;
-        }
+        public int Value => _score;
 
         public void ChangeBy(int amount)
         {

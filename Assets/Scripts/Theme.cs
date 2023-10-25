@@ -6,16 +6,16 @@ public class Theme : MonoBehaviour
     {
         // This is a singleton pattern. It ensures that only one instance of this object exists at any given time
 
-        // Find all objects with the "Music" tag
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
+        // Find the object with the "Music" tag
+        var obj = GameObject.FindGameObjectWithTag("Music");
 
-        // If there is more than one, destroy this object
-        if (objs.Length > 1)
+        // If there is already an object with the "Music" tag, destroy current object
+        if (obj != null && obj != gameObject)
         {
             Destroy(gameObject);
         }
 
-        // If there is only one, dont destroy this object
+        // If there is no object with the "Music" tag, don't destroy this object
         DontDestroyOnLoad(gameObject);
     }
 }

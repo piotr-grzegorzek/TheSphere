@@ -14,11 +14,15 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<Player.Score>().ChangeBy(+1);
-        GetComponent<AudioSource>().Play();
-        GetComponent<MeshRenderer>().enabled = false;
-        // Delay the set active to let the sound play
-        Invoke(nameof(DelayedCollect), 2.0f);
+        if (other.CompareTag(Tags.Player))
+        {
+            other.gameObject.GetComponent<Player.Score>().ChangeBy(+1);
+
+            GetComponent<AudioSource>().Play();
+            GetComponent<MeshRenderer>().enabled = false;
+            // Delay the set active to let the sound play
+            Invoke(nameof(DelayedCollect), 2.0f);
+        }
     }
 
     private void DelayedCollect()

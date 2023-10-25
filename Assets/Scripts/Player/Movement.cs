@@ -10,6 +10,14 @@ namespace Player
 
         private Vector3 _axis;
 
+        private Rigidbody _rb;
+
+        void Start()
+        {
+            // Cache for performance
+            _rb = GetComponent<Rigidbody>();
+        }
+
         void Update()
         {
             // Input can be configured in Edit > Project Settings > Input Manager > Axes
@@ -23,7 +31,7 @@ namespace Player
 
         void FixedUpdate()
         {
-            GetComponent<Rigidbody>().AddForce(_axis * Thrust);
+            _rb.AddForce(_axis * Thrust);
         }
 
         private void CheckFall()
@@ -31,7 +39,7 @@ namespace Player
             if (transform.position.y < -10.0f)
             {
                 transform.position = new Vector3(0.0f, 0.5f, 0.0f);
-                GetComponent<Rigidbody>().velocity = Vector3.zero;
+                _rb.velocity = Vector3.zero;
                 _axis = Vector3.zero;
             }
         }

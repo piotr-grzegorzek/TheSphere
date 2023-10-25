@@ -14,6 +14,6 @@ public class TextScore : MonoBehaviour
 
     private void UpdateScoreText()
     {
-        GetComponent<TextMeshProUGUI>().text = $"Score: {_ps.Get()}";
+        GetComponent<TextMeshProUGUI>().text = $"Score: {_ps.Value}";
     }
 }

@@ -9,11 +9,11 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         _player = GameObject.FindWithTag(Tags.Player).transform;
-        _offset = _player.position - transform.position;
+        _offset = transform.position - _player.position;
     }
 
-    void Update()
+    void LateUpdate()
     {
-        transform.position = _player.position - _offset;
+        transform.position = _player.position + _offset;
     }
 }

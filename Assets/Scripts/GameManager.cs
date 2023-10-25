@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     private void CheckScore()
     {
-        if (_ps.Get() == _points.childCount)
+        if (_ps.Value == _points.childCount)
         {
             int sceneID = SceneManager.GetActiveScene().buildIndex;
             switch (sceneID)
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
                     SceneManager.LoadScene(3);
                     break;
                 default:
-                    Debug.Log($"LevelUp() called in scene {sceneID} which is not supported");
+                    Debug.Log($"CheckScore() called in scene {sceneID} which is not supported");
                     break;
             }
         }
