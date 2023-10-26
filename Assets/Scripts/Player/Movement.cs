@@ -34,8 +34,9 @@ namespace Player
 
         internal void ResetInput()
         {
-            Rb.velocity = Vector3.zero;
             Axis = Vector3.zero;
+            Rb.angularVelocity = Vector3.zero;
+            Rb.velocity = Vector3.zero;
         }
     }
 }
