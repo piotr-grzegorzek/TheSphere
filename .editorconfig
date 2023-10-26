@@ -22,6 +22,61 @@ dotnet_diagnostic.IDE0044.severity = warning
 # IDE0051: Remove unused private members
 dotnet_diagnostic.IDE0052.severity = warning
 
+# Nullable context
+dotnet_diagnostic.CS8597.severity = warning
+dotnet_diagnostic.CS8600.severity = warning
+dotnet_diagnostic.CS8601.severity = warning
+dotnet_diagnostic.CS8602.severity = warning
+dotnet_diagnostic.CS8603.severity = warning
+dotnet_diagnostic.CS8604.severity = warning
+dotnet_diagnostic.CS8605.severity = warning
+dotnet_diagnostic.CS8607.severity = warning
+dotnet_diagnostic.CS8608.severity = warning
+dotnet_diagnostic.CS8609.severity = warning
+dotnet_diagnostic.CS8610.severity = warning
+dotnet_diagnostic.CS8611.severity = warning
+dotnet_diagnostic.CS8612.severity = warning
+dotnet_diagnostic.CS8613.severity = warning
+dotnet_diagnostic.CS8614.severity = warning
+dotnet_diagnostic.CS8615.severity = warning
+dotnet_diagnostic.CS8616.severity = warning
+dotnet_diagnostic.CS8617.severity = warning
+dotnet_diagnostic.CS8618.severity = warning
+dotnet_diagnostic.CS8619.severity = warning
+dotnet_diagnostic.CS8620.severity = warning
+dotnet_diagnostic.CS8621.severity = warning
+dotnet_diagnostic.CS8622.severity = warning
+dotnet_diagnostic.CS8624.severity = warning
+dotnet_diagnostic.CS8625.severity = warning
+dotnet_diagnostic.CS8629.severity = warning
+dotnet_diagnostic.CS8631.severity = warning
+dotnet_diagnostic.CS8633.severity = warning
+dotnet_diagnostic.CS8634.severity = warning
+dotnet_diagnostic.CS8643.severity = warning
+dotnet_diagnostic.CS8644.severity = warning
+dotnet_diagnostic.CS8645.severity = warning
+dotnet_diagnostic.CS8655.severity = warning
+dotnet_diagnostic.CS8667.severity = warning
+dotnet_diagnostic.CS8670.severity = warning
+dotnet_diagnostic.CS8714.severity = warning
+dotnet_diagnostic.CS8762.severity = warning
+dotnet_diagnostic.CS8763.severity = warning
+dotnet_diagnostic.CS8764.severity = warning
+dotnet_diagnostic.CS8765.severity = warning
+dotnet_diagnostic.CS8766.severity = warning
+dotnet_diagnostic.CS8767.severity = warning
+dotnet_diagnostic.CS8768.severity = warning
+dotnet_diagnostic.CS8769.severity = warning
+dotnet_diagnostic.CS8770.severity = warning
+dotnet_diagnostic.CS8774.severity = warning
+dotnet_diagnostic.CS8775.severity = warning
+dotnet_diagnostic.CS8776.severity = warning
+dotnet_diagnostic.CS8777.severity = warning
+dotnet_diagnostic.CS8819.severity = warning
+dotnet_diagnostic.CS8824.severity = warning
+dotnet_diagnostic.CS8825.severity = warning
+dotnet_diagnostic.CS8847.severity = warning
+
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_indent_block_contents
 csharp_indent_block_contents = true
 
