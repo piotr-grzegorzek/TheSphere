@@ -27,7 +27,7 @@ namespace Player
         private void MoveTo(Vector3 position)
         {
             transform.position = position;
-            Player.Movement movement = GetComponent<Player.Movement>();
+            Movement movement = GetComponent<Movement>();
             movement.Rb.velocity = Vector3.zero;
             movement.Axis = Vector3.zero;
         }

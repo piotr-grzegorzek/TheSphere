@@ -9,7 +9,7 @@ public class Theme : MonoBehaviour
 
     void Awake()
     {
-        Singleton();
+        DestroyPrevious();
         DontDestroyOnLoad(gameObject);
 
         _as = GetComponent<AudioSource>();
@@ -17,9 +17,8 @@ public class Theme : MonoBehaviour
         _as.Play();
     }
 
-    private void Singleton()
+    private void DestroyPrevious()
     {
-        // Destroy all previous theme objects
         GameObject[] themes = GameObject.FindGameObjectsWithTag(Tags.Theme);
         themes.Where(theme => theme != gameObject).ToList()
             .ForEach(theme => Destroy(theme));
