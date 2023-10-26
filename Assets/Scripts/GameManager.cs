@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _points = GameObject.FindGameObjectWithTag(Tags.Points).transform;
-
         _ps = GameObject.FindWithTag(Tags.Player).GetComponent<Player.Score>();
         _ps.ChangeEvent += CheckScore;
     }
@@ -19,19 +18,7 @@ public class GameManager : MonoBehaviour
     {
         if (_ps.Value == _points.childCount)
         {
-            int sceneID = SceneManager.GetActiveScene().buildIndex;
-            switch (sceneID)
-            {
-                case 1:
-                    SceneManager.LoadScene(2);
-                    break;
-                case 2:
-                    SceneManager.LoadScene(3);
-                    break;
-                default:
-                    Debug.Log($"CheckScore() called in scene {sceneID} which is not supported");
-                    break;
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
