@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationSpeed: 1
   RotationAxis: {x: 30, y: 20, z: 0}
+  CollectionDelay: 1
 --- !u!82 &3912285686137500678
 AudioSource:
   m_ObjectHideFlags: 0

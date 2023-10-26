@@ -6,6 +6,23 @@ public class Collectible : MonoBehaviour
 
     public Vector3 RotationAxis = new(30, 20, 0);
 
+    public float CollectionDelay = 1f;
+
+    private Player.Score _ps;
+
+    private Collider _collider;
+
+    private MeshRenderer _meshRenderer;
+
+    private AudioSource _audioSource;
+
+    void Start()
+    {
+        _collider = GetComponent<Collider>();
+        _meshRenderer = GetComponent<MeshRenderer>();
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         // Time.deltaTime to make it framerate independent
@@ -16,21 +33,18 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag(Tags.Player))
         {
-            GetComponent<Collider>().enabled = false;
-            GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<AudioSource>().Play();
+            _collider.enabled = false;
+            _meshRenderer.enabled = false;
+            _audioSource.Play();
 
-            // Delay the set active to let the sound play after normal collection
-            Invoke(nameof(DelayedCollect), 2.0f);
-
-            // Scene might change and sound might be cut off
-            // Coroutines could be used but they are too slow (probably because of the Player.Score component)
-            other.gameObject.GetComponent<Player.Score>().ChangeBy(+1);
+            _ps = other.GetComponent<Player.Score>();
+            Invoke(nameof(CollectDelayed), CollectionDelay);
         }
     }
 
-    private void DelayedCollect()
+    private void CollectDelayed()
     {
+        _ps.ChangeBy(+1);
         gameObject.SetActive(false);
     }
 }
