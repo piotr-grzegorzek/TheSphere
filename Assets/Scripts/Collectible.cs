@@ -18,6 +18,7 @@ public class Collectible : MonoBehaviour
 
     void Start()
     {
+        _ps = GameObject.FindWithTag(Tags.Player).GetComponent<Player.Score>();
         _collider = GetComponent<Collider>();
         _meshRenderer = GetComponent<MeshRenderer>();
         _audioSource = GetComponent<AudioSource>();
@@ -37,7 +38,6 @@ public class Collectible : MonoBehaviour
             _meshRenderer.enabled = false;
             _audioSource.Play();
 
-            _ps = other.GetComponent<Player.Score>();
             Invoke(nameof(CollectDelayed), CollectionDelay);
         }
     }

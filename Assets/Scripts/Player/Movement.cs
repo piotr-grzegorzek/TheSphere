@@ -31,5 +31,11 @@ namespace Player
         {
             Rb.AddForce(Axis * Thrust);
         }
+
+        internal void ResetInput()
+        {
+            Rb.velocity = Vector3.zero;
+            Axis = Vector3.zero;
+        }
     }
 }

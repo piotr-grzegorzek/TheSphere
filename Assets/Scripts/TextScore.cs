@@ -5,15 +5,18 @@ public class TextScore : MonoBehaviour
 {
     private Player.Score _ps;
 
+    private TextMeshProUGUI _text;
+
     void Start()
     {
         _ps = GameObject.FindWithTag(Tags.Player).GetComponent<Player.Score>();
+        _text = GetComponent<TextMeshProUGUI>();
         _ps.ChangeEvent += UpdateScoreText;
         UpdateScoreText();
     }
 
     private void UpdateScoreText()
     {
-        GetComponent<TextMeshProUGUI>().text = $"Score: {_ps.Value}";
+        _text.text = $"Score: {_ps.Value}";
     }
 }
