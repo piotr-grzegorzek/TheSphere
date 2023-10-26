@@ -1,8 +1,8 @@
-public static class Tags
+internal static class Tags
 {
-    public const string Player = "Player";
+    internal const string Player = "Player";
 
-    public const string Points = "Points";
+    internal const string Points = "Points";
 
-    public const string TextInfo = "TextInfo";
+    internal const string TextInfo = "TextInfo";
 }
