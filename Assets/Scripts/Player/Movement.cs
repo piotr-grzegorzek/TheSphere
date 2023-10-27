@@ -32,7 +32,7 @@ namespace Player
             Rb.AddForce(Axis * Thrust);
         }
 
-        internal void ResetInput()
+        internal void Reset()
         {
             Axis = Vector3.zero;
             Rb.angularVelocity = Vector3.zero;
