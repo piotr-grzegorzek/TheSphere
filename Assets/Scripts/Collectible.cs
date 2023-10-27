@@ -38,13 +38,14 @@ public class Collectible : MonoBehaviour
             _meshRenderer.enabled = false;
             _audioSource.Play();
 
+            // scene change cuts audio, but coroutines, invoke are too slow
+            _ps.ChangeBy(+1);
             Invoke(nameof(CollectDelayed), CollectionDelay);
         }
     }
 
     private void CollectDelayed()
     {
-        _ps.ChangeBy(+1);
         gameObject.SetActive(false);
     }
 }
