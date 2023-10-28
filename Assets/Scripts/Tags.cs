@@ -4,7 +4,5 @@ internal static class Tags
 
     internal const string Points = "Points";
 
-    internal const string TextInfo = "TextInfo";
-
     internal const string Theme = "Theme";
 }
