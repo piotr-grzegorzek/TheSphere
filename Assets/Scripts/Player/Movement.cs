@@ -4,9 +4,9 @@ namespace Player
 {
     public class Movement : MonoBehaviour
     {
-        public float Thrust = 5f;
+        public float Thrust = 10f;
 
-        public float JumpForce = 100f;
+        public float JumpForce = 10f;
 
         internal Rigidbody Rb;
 
