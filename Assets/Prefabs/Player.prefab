@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3763835569133360005}
   - component: {fileID: 95684991281382897}
   - component: {fileID: 8204606080901417159}
-  - component: {fileID: 8703851235764222335}
   - component: {fileID: 3581553514709678553}
+  - component: {fileID: 6203328549344894873}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -135,20 +135,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8703851235764222335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070065153670311072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d115daa829d00cf43bcd6710a89b6496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Thrust: 10
-  JumpForce: 10
 --- !u!114 &3581553514709678553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388190ab1d0fea249987890e5b54440e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6203328549344894873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070065153670311072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d115daa829d00cf43bcd6710a89b6496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Thrust: 5
+  JumpForce: 10
+  GroundDistance: 1
