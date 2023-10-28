@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndMenuClick : MonoBehaviour
 {
     public void OnClick()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }
