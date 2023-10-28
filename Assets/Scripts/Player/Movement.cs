@@ -14,6 +14,13 @@ namespace Player
 
         internal Vector3 Axis;
 
+        internal void Reset()
+        {
+            Axis = Vector3.zero;
+            Rb.angularVelocity = Vector3.zero;
+            Rb.velocity = Vector3.zero;
+        }
+
         void Start()
         {
             // Cache for performance
@@ -34,26 +41,11 @@ namespace Player
             Rb.AddForce(Axis * Thrust);
         }
 
-        internal void Reset()
-        {
-            Axis = Vector3.zero;
-            Rb.angularVelocity = Vector3.zero;
-            Rb.velocity = Vector3.zero;
-        }
-
         private bool IsGrounded()
         {
             LayerMask GroundLayer = LayerMask.GetMask(Tags.Collider);
             // Cast a ray downwards from the player's position
-            if (Physics.Raycast(transform.position, Vector3.down, out _, ColliderDistance, GroundLayer))
-            {
-                // If the ray hits the ground, the player is grounded
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return Physics.Raycast(transform.position, Vector3.down, out _, ColliderDistance, GroundLayer);
         }
     }
 }

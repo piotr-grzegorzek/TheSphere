@@ -5,14 +5,18 @@ namespace Player
 {
     public class Score : MonoBehaviour
     {
-        internal int Value { get; private set; }
-
         internal event Action ChangeEvent;
 
-        internal void ChangeBy(int amount)
+        private int _value;
+
+        public int Value
         {
-            Value += amount;
-            ChangeEvent?.Invoke();
+            get => _value;
+            set
+            {
+                _value = value;
+                ChangeEvent?.Invoke();
+            }
         }
     }
 }

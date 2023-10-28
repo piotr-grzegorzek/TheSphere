@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7687853600131331136}
   - component: {fileID: 8581676652374424200}
   - component: {fileID: 8477295781316851289}
-  - component: {fileID: 1466877746329531749}
   - component: {fileID: 3912285686137500678}
   - component: {fileID: 5873230374365758448}
+  - component: {fileID: 6048043586636450171}
+  - component: {fileID: 7813932838259067352}
   m_Layer: 0
   m_Name: Point
   m_TagString: Untagged
@@ -86,21 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1466877746329531749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8993767569618820671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea69de090d2a3a419226d7835c46cc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotationSpeed: 1
-  RotationAxis: {x: 30, y: 20, z: 0}
-  CollectionDelay: 1
 --- !u!82 &3912285686137500678
 AudioSource:
   m_ObjectHideFlags: 0
@@ -218,3 +204,30 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5000002
   m_Center: {x: 0.00000011920929, y: 0, z: -0.00000023841858}
+--- !u!114 &6048043586636450171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993767569618820671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e8b74229cff654d8a986c15fb63197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationSpeed: 1
+  RotationAxis: {x: 30, y: 20, z: 0}
+--- !u!114 &7813932838259067352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993767569618820671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb54bcb6ebd3d2f4c89131f1d6abeb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollectionDelay: 1
