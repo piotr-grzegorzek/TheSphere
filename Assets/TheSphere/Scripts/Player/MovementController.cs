@@ -2,13 +2,13 @@ using UnityEngine;
 
 namespace Player
 {
-    public class Movement : MonoBehaviour
+    public class MovementController : MonoBehaviour
     {
         public float Thrust = 5f;
 
         public float JumpForce = 10f;
 
-        public float ColliderDistance = 1f;
+        public float GroundDistance = 1f;
 
         internal Rigidbody Rb;
 
@@ -43,9 +43,9 @@ namespace Player
 
         private bool IsGrounded()
         {
-            LayerMask GroundLayer = LayerMask.GetMask(Tags.Collider);
+            LayerMask GroundLayer = LayerMask.GetMask(Layer.Ground);
             // Cast a ray downwards from the player's position
-            return Physics.Raycast(transform.position, Vector3.down, out _, ColliderDistance, GroundLayer);
+            return Physics.Raycast(transform.position, Vector3.down, out _, GroundDistance, GroundLayer);
         }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 481134}
   - component: {fileID: 20567912}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: test_asteroid_LODGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,9 +73,9 @@ GameObject:
   - component: {fileID: 469044}
   - component: {fileID: 5428902}
   - component: {fileID: 11467940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid 3
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 445250}
   - component: {fileID: 3348474}
   - component: {fileID: 2342174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: test_asteroid3_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 455198}
   - component: {fileID: 3363018}
   - component: {fileID: 2333210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: test_asteroid3_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 494542}
   - component: {fileID: 3390286}
   - component: {fileID: 2322484}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: test_asteroid3_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

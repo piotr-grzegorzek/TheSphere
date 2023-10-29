@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Points
   - Theme
-  - Enemy
-  - CameraPivot
+  - Point
   layers:
   - Default
   - TransparentFX
@@ -15,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Collider
+  - Ground
   - 
   - 
   - 

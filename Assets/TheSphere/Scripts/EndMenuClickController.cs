@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndMenuClick : MonoBehaviour
+public class EndMenuClickController : MonoBehaviour
 {
     public void OnClick()
     {

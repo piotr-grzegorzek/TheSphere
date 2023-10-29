@@ -195,7 +195,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3224777611525563936, guid: b062509223c91f945bc7b846a4025818, type: 3}
       propertyPath: m_Name
-      value: GameManager
+      value: SceneController
       objectReference: {fileID: 0}
     - target: {fileID: 5572902861728289024, guid: b062509223c91f945bc7b846a4025818, type: 3}
       propertyPath: m_LocalPosition.x
@@ -253,30 +253,6 @@ PrefabInstance:
     - target: {fileID: 105566, guid: decc2ba5add7b984aab134a07b436422, type: 3}
       propertyPath: m_Name
       value: Clouds_Cumulus_G1
-      objectReference: {fileID: 0}
-    - target: {fileID: 105566, guid: decc2ba5add7b984aab134a07b436422, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 113402, guid: decc2ba5add7b984aab134a07b436422, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 128370, guid: decc2ba5add7b984aab134a07b436422, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 151080, guid: decc2ba5add7b984aab134a07b436422, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 170892, guid: decc2ba5add7b984aab134a07b436422, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 183994, guid: decc2ba5add7b984aab134a07b436422, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 454398, guid: decc2ba5add7b984aab134a07b436422, type: 3}
       propertyPath: m_LocalScale.x
@@ -629,7 +605,7 @@ GameObject:
   - component: {fileID: 1836894671}
   m_Layer: 0
   m_Name: Points
-  m_TagString: Points
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

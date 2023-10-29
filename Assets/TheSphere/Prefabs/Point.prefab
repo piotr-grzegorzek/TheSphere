@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7813932838259067352}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,4 +230,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb54bcb6ebd3d2f4c89131f1d6abeb69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectionDelay: 1
+  DelayedSeconds: 1

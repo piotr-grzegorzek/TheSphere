@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Linq;
 
-public class Theme : MonoBehaviour
+public class ThemeController : MonoBehaviour
 {
     public AudioClip Clip;
 
@@ -10,16 +10,17 @@ public class Theme : MonoBehaviour
     void Awake()
     {
         DestroyPrevious();
-        DontDestroyOnLoad(gameObject);
 
         _as = GetComponent<AudioSource>();
         _as.clip = Clip;
         _as.Play();
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void DestroyPrevious()
     {
-        GameObject[] themes = GameObject.FindGameObjectsWithTag(Tags.Theme);
+        GameObject[] themes = GameObject.FindGameObjectsWithTag(Tag.Theme);
         themes.Where(theme => theme != gameObject).ToList()
             .ForEach(theme => Destroy(theme));
     }

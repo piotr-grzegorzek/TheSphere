@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour
+public class CameraMovementController : MonoBehaviour
 {
     private Transform _player;
 
@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
 
     void Start()
     {
-        _player = GameObject.FindWithTag(Tags.Player).transform;
+        _player = GameObject.FindWithTag(Tag.Player).transform;
         _offset = transform.position - _player.position;
     }
 

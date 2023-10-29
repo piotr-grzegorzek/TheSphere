@@ -4,19 +4,19 @@ public class KillBox : MonoBehaviour
 {
     public Vector3 StartPosition = new(0.0f, 0.5f, 0.0f);
 
-    private Player.Movement _pm;
+    private Player.MovementController _pmc;
 
     void Start()
     {
-        _pm = GameObject.FindWithTag(Tags.Player).GetComponent<Player.Movement>();
+        _pmc = GameObject.FindWithTag(Tag.Player).GetComponent<Player.MovementController>();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(Tags.Player))
+        if (other.CompareTag(Tag.Player))
         {
             other.transform.position = StartPosition;
-            _pm.Reset();
+            _pmc.Reset();
         }
     }
 }
