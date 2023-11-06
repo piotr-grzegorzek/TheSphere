@@ -77,6 +77,8 @@ dotnet_diagnostic.CS8824.severity = warning
 dotnet_diagnostic.CS8825.severity = warning
 dotnet_diagnostic.CS8847.severity = warning
 
+trim_trailing_whitespace = true
+
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_indent_block_contents
 csharp_indent_block_contents = true
 
@@ -225,7 +227,7 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:warning
 csharp_style_throw_expression = true:warning
 
 # implicit object creation when type is apparent
-csharp_style_implicit_object_creation_when_type_is_apparent = true:warning
+csharp_style_implicit_object_creation_when_type_is_apparent = false:warning
 
 # http://kent-boogaart.com/blog/editorconfig-reference-for-c-developers#csharp_style_var_elsewhere
 csharp_style_var_elsewhere = false:warning
