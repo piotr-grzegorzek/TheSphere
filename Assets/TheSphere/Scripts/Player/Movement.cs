@@ -10,6 +10,8 @@ namespace Player
 
         public float GroundDistance = 1f;
 
+        public ParticleSystem JumpParticles;
+
         internal Rigidbody Rb;
 
         internal Vector3 Axis;
@@ -34,6 +36,11 @@ namespace Player
             Axis.x = Input.GetAxis("Horizontal");
             Axis.y = (Input.GetKey(KeyCode.Space) && IsGrounded()) ? JumpForce : 0f;
             Axis.z = Input.GetAxis("Vertical");
+
+            if (Axis.y > 0 && JumpParticles != null)
+            {
+                Instantiate(JumpParticles, transform.position, Quaternion.identity);
+            }
         }
 
         void FixedUpdate()
