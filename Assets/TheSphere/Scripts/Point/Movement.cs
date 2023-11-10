@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Point
 {
-    public class MovementController : MonoBehaviour
+    public class Movement : MonoBehaviour
     {
         public float RotationSpeed = 1.0f;
 

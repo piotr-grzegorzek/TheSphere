@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuClickController : MonoBehaviour
+public class MainMenuClick : MonoBehaviour
 {
     public void Run()
     {

@@ -3,18 +3,18 @@ using UnityEngine;
 
 namespace Player
 {
-    public class ScoreController : MonoBehaviour
+    public class Score : MonoBehaviour
     {
         internal event Action ScoreChangeEvent;
 
-        private int _score;
+        private int _value;
 
-        public int Score
+        public int Value
         {
-            get => _score;
+            get => _value;
             set
             {
-                _score = value;
+                _value = value;
                 ScoreChangeEvent?.Invoke();
             }
         }

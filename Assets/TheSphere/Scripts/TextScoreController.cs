@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class TextScoreController : MonoBehaviour
 {
-    private Player.ScoreController _psc;
+    private Player.Score _ps;
 
     private TextMeshProUGUI _text;
 
     void Start()
     {
-        _psc = GameObject.FindWithTag(Tag.Player).GetComponent<Player.ScoreController>();
+        _ps = GameObject.FindWithTag(Tag.Player).GetComponent<Player.Score>();
         _text = GetComponent<TextMeshProUGUI>();
         UpdateScoreText();
-        _psc.ScoreChangeEvent += UpdateScoreText;
+        _ps.ScoreChangeEvent += UpdateScoreText;
     }
 
     private void UpdateScoreText()
     {
-        _text.text = $"Score: {_psc.Score}";
+        _text.text = $"Score: {_ps.Value}";
     }
 }

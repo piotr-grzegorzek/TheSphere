@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace Point
 {
-    public class TriggerController : MonoBehaviour
+    public class Trigger : MonoBehaviour
     {
         public float DelayedSeconds = 1f;
 
-        private Player.ScoreController _psc;
+        private Player.Score _ps;
 
         private Collider _collider;
 
@@ -16,7 +16,7 @@ namespace Point
 
         void Start()
         {
-            _psc = GameObject.FindWithTag(Tag.Player).GetComponent<Player.ScoreController>();
+            _ps = GameObject.FindWithTag(Tag.Player).GetComponent<Player.Score>();
             _collider = GetComponent<Collider>();
             _meshRenderer = GetComponent<MeshRenderer>();
             _audioSource = GetComponent<AudioSource>();
@@ -31,7 +31,7 @@ namespace Point
                 _audioSource.Play();
 
                 // scene change cuts audio, but coroutines, invoke are too slow
-                _psc.Score++;
+                _ps.Value++;
                 Invoke(nameof(Delayed), DelayedSeconds);
             }
         }

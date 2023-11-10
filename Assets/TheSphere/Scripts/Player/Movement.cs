@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class MovementController : MonoBehaviour
+    public class Movement : MonoBehaviour
     {
         public float Thrust = 5f;
 
