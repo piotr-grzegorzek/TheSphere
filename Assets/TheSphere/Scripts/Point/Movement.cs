@@ -5,8 +5,7 @@ namespace Point
     public class Movement : MonoBehaviour
     {
         public float RotationSpeed = 1.0f;
-
-        public Vector3 RotationAxis = new(30, 20, 0);
+        public Vector3 RotationAxis = new Vector3(30, 20, 0);
 
         void Update()
         {

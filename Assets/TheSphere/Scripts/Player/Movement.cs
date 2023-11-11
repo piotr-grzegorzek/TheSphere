@@ -1,19 +1,16 @@
 using UnityEngine;
+using Constant;
 
 namespace Player
 {
     public class Movement : MonoBehaviour
     {
         public float Thrust = 5f;
-
         public float JumpForce = 10f;
-
         public float GroundDistance = 1f;
-
         public ParticleSystem JumpParticles;
 
         internal Rigidbody Rb;
-
         internal Vector3 Axis;
 
         internal void Reset()
@@ -28,7 +25,6 @@ namespace Player
             // Cache for performance
             Rb = GetComponent<Rigidbody>();
         }
-
         void Update()
         {
             // Input can be configured in Edit > Project Settings > Input Manager > Axes
@@ -42,7 +38,6 @@ namespace Player
                 Instantiate(JumpParticles, transform.position, Quaternion.identity);
             }
         }
-
         void FixedUpdate()
         {
             Rb.AddForce(Axis * Thrust);

@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Scene = Constant.Scene;
 
 public class MainMenuClick : MonoBehaviour
 {
     public void Run()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(Scene.Level1);
     }
 
     public void Options()

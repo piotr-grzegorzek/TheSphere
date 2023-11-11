@@ -12,7 +12,7 @@ namespace Player
         public int Value
         {
             get => _value;
-            set
+            internal set
             {
                 _value = value;
                 ScoreChangeEvent?.Invoke();

@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Linq;
+using Constant;
 
 public class ThemeController : MonoBehaviour
 {
@@ -21,7 +21,14 @@ public class ThemeController : MonoBehaviour
     private void DestroyPrevious()
     {
         GameObject[] themes = GameObject.FindGameObjectsWithTag(Tag.Theme);
-        themes.Where(theme => theme != gameObject).ToList()
-            .ForEach(theme => Destroy(theme));
+
+        foreach (var theme in themes)
+        {
+            if (theme != gameObject)
+            {
+                Destroy(theme);
+                Debug.Log($"Destroyed {theme.name}");
+            }
+        }
     }
 }

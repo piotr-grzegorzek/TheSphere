@@ -1,16 +1,18 @@
 using UnityEngine;
+using Constant;
 
 public class KillBoxTrigger : MonoBehaviour
 {
-    public Vector3 StartPosition = new(0.0f, 0.5f, 0.0f);
+    public Vector3 StartPosition = new Vector3(0.0f, 0.5f, 0.0f);
 
     private Player.Movement _pm;
 
     void Start()
     {
-        _pm = GameObject.FindWithTag(Tag.Player).GetComponent<Player.Movement>();
-    }
+        GameObject playerObject = GameObject.FindGameObjectWithTag(Tag.Player);
 
+        _pm = playerObject.GetComponent<Player.Movement>();
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Tag.Player))

@@ -1,15 +1,17 @@
 using TMPro;
 using UnityEngine;
+using Constant;
 
 public class TextScoreController : MonoBehaviour
 {
     private Player.Score _ps;
-
     private TextMeshProUGUI _text;
 
     void Start()
     {
-        _ps = GameObject.FindWithTag(Tag.Player).GetComponent<Player.Score>();
+        GameObject playerObject = GameObject.FindWithTag(Tag.Player);
+
+        _ps = playerObject.GetComponent<Player.Score>();
         _text = GetComponent<TextMeshProUGUI>();
         UpdateScoreText();
         _ps.ScoreChangeEvent += UpdateScoreText;
