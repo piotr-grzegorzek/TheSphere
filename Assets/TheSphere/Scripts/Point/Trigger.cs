@@ -11,15 +11,16 @@ namespace Point
         private Collider _collider;
         private MeshRenderer _meshRenderer;
         private AudioSource _audioSource;
+        private Light _light;
 
         void Start()
         {
             GameObject playerObject = GameObject.FindGameObjectWithTag(Tag.Player);
-            _ps = playerObject.GetComponent<Player.Score>();
-
             _collider = GetComponent<Collider>();
             _meshRenderer = GetComponent<MeshRenderer>();
             _audioSource = GetComponent<AudioSource>();
+            _light = GetComponent<Light>();
+            _ps = playerObject.GetComponent<Player.Score>();
         }
         void OnTriggerEnter(Collider other)
         {
@@ -27,8 +28,8 @@ namespace Point
             {
                 _collider.enabled = false;
                 _meshRenderer.enabled = false;
+                _light.enabled = false;
                 _audioSource.Play();
-                _ps.Value++;
 
                 Invoke(nameof(Delayed), DelayedSeconds);
             }
@@ -37,6 +38,7 @@ namespace Point
         private void Delayed()
         {
             gameObject.SetActive(false);
+            _ps.Value++;
         }
     }
 }

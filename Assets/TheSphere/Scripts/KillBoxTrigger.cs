@@ -10,7 +10,6 @@ public class KillBoxTrigger : MonoBehaviour
     void Start()
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag(Tag.Player);
-
         _pm = playerObject.GetComponent<Player.Movement>();
     }
     void OnTriggerEnter(Collider other)

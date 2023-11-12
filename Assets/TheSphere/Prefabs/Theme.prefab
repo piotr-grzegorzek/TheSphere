@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8100022146254152726}
-  - component: {fileID: 8547496042106516510}
   - component: {fileID: 2627886093038995191}
+  - component: {fileID: 8547496042106516510}
   m_Layer: 0
   m_Name: Theme
   m_TagString: Theme
@@ -33,6 +33,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2627886093038995191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533624162334281856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8341b29150410408f5d4f66550e210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainMenuTheme: {fileID: 8300000, guid: a51fdfd728fdb124da2d169879eb59ab, type: 3}
+  Level1Theme: {fileID: 8300000, guid: ec0a01e50bdfe0f4da543d2f1b8c23ba, type: 3}
 --- !u!82 &8547496042106516510
 AudioSource:
   m_ObjectHideFlags: 0
@@ -129,16 +143,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2627886093038995191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8533624162334281856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce8341b29150410408f5d4f66550e210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Clip: {fileID: 0}

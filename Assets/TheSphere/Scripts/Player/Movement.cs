@@ -8,16 +8,20 @@ namespace Player
         public float Thrust = 5f;
         public float JumpForce = 10f;
         public float GroundDistance = 1f;
-        public ParticleSystem JumpParticles;
 
         internal Rigidbody Rb;
         internal Vector3 Axis;
 
+        private bool _wasInAir = false;
+
         internal void Reset()
         {
             Axis = Vector3.zero;
-            Rb.angularVelocity = Vector3.zero;
-            Rb.velocity = Vector3.zero;
+            if (Rb != null)
+            {
+                Rb.angularVelocity = Vector3.zero;
+                Rb.velocity = Vector3.zero;
+            }
         }
 
         void Start()
@@ -33,10 +37,12 @@ namespace Player
             Axis.y = (Input.GetKey(KeyCode.Space) && IsGrounded()) ? JumpForce : 0f;
             Axis.z = Input.GetAxis("Vertical");
 
-            if (Axis.y > 0 && JumpParticles != null)
+            if (IsGrounded() && _wasInAir)
             {
-                Instantiate(JumpParticles, transform.position, Quaternion.identity);
+                MakeParticles();
             }
+
+            _wasInAir = !IsGrounded();
         }
         void FixedUpdate()
         {
@@ -48,6 +54,17 @@ namespace Player
             LayerMask GroundLayer = LayerMask.GetMask(Layer.Ground);
             // Cast a ray downwards from the player's position
             return Physics.Raycast(transform.position, Vector3.down, out _, GroundDistance, GroundLayer);
+        }
+        private void MakeParticles()
+        {
+            GameObject[] particlesAll = GameObject.FindGameObjectsWithTag(Tag.JumpParticle);
+            if (particlesAll.Length == 1)
+            {
+                GameObject particles = Instantiate(particlesAll[0], transform.position, Quaternion.identity);
+                particles.GetComponent<ParticleSystem>().Play();
+                GetComponent<AudioSource>().Play();
+                Destroy(particles, 1f);
+            }
         }
     }
 }

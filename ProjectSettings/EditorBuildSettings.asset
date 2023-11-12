@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TheSphere/Scenes/EndMenu.unity
     guid: d8b16736c00306f42b70865df16ef4d8
+  - enabled: 1
+    path: Assets/TheSphere/Scenes/HighScores.unity
+    guid: 97ccebaabceea3a4dbfe871c239d711e
   m_configObjects: {}

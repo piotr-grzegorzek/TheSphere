@@ -3,32 +3,35 @@ using Constant;
 
 public class ThemeController : MonoBehaviour
 {
-    public AudioClip Clip;
+    public AudioClip MainMenuTheme;
+    public AudioClip Level1Theme;
 
     private AudioSource _as;
 
-    void Awake()
+    internal void ChangeToMainMenuClip()
     {
-        DestroyPrevious();
-
-        _as = GetComponent<AudioSource>();
-        _as.clip = Clip;
+        _as.clip = MainMenuTheme;
         _as.Play();
-
-        DontDestroyOnLoad(gameObject);
+    }
+    internal void ChangeToGameClip()
+    {
+        _as.clip = Level1Theme;
+        _as.Play();
     }
 
-    private void DestroyPrevious()
+    void Awake()
     {
-        GameObject[] themes = GameObject.FindGameObjectsWithTag(Tag.Theme);
+        GameObject[] objs = GameObject.FindGameObjectsWithTag(Tag.Theme);
 
-        foreach (var theme in themes)
+        if (objs.Length > 1)
         {
-            if (theme != gameObject)
-            {
-                Destroy(theme);
-                Debug.Log($"Destroyed {theme.name}");
-            }
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+            _as = GetComponent<AudioSource>();
+            ChangeToMainMenuClip();
         }
     }
 }

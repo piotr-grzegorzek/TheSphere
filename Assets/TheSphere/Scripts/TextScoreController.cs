@@ -10,7 +10,6 @@ public class TextScoreController : MonoBehaviour
     void Start()
     {
         GameObject playerObject = GameObject.FindWithTag(Tag.Player);
-
         _ps = playerObject.GetComponent<Player.Score>();
         _text = GetComponent<TextMeshProUGUI>();
         UpdateScoreText();

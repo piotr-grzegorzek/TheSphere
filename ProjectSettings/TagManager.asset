@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Theme
   - Point
+  - JumpParticle
   layers:
   - Default
   - TransparentFX
