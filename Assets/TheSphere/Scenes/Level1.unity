@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 7206bbc4afffa8343ad21ad632c2e523, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 705977df9909c3e42b8cf4df0b40dc4d, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: c56e21c4cf4863f48824927087c9eb42, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -496,13 +496,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28957042, y: -0, z: -0, w: 0.9571568}
-  m_LocalPosition: {x: 1.531, y: 10.506, z: -10.501}
+  m_LocalRotation: {x: 0.21355163, y: -0.38685945, z: 0.1282915, w: 0.8878495}
+  m_LocalPosition: {x: 8.88, y: 10.78, z: -7.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 33.665, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 28.585, y: -46.047, z: 4.087}
 --- !u!1 &992299191
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +517,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &992299192
 Transform:
@@ -1109,6 +1109,10 @@ PrefabInstance:
     - target: {fileID: 1070065153670311072, guid: 4b3e2726124a71f438f215d23199bfe9, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070065153670311072, guid: 4b3e2726124a71f438f215d23199bfe9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2056093498229856063, guid: 4b3e2726124a71f438f215d23199bfe9, type: 3}
       propertyPath: m_audioClip
