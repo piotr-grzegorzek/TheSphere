@@ -304,7 +304,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 205555793265577544, guid: b28d457086b35ab4786cd085a1cbf9b8, type: 3}
       propertyPath: m_text
-      value: "Wyjd\u017A z gry"
+      value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 1613787427547803579, guid: b28d457086b35ab4786cd085a1cbf9b8, type: 3}
       propertyPath: m_Name
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Autor: Piotr Grzegorzek'
+  m_text: 'Author: Piotr Grzegorzek'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Koniec
+  m_text: The End
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -782,7 +782,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 205555793265577544, guid: b28d457086b35ab4786cd085a1cbf9b8, type: 3}
       propertyPath: m_text
-      value: "Menu g\u0142\xF3wne"
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 1613787427547803579, guid: b28d457086b35ab4786cd085a1cbf9b8, type: 3}
       propertyPath: m_Name
