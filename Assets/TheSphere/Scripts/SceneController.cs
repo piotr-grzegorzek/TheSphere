@@ -32,9 +32,16 @@ public class SceneController : MonoBehaviour
     {
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
         int currentScore = _pt.Value;
-        int highScore = PlayerPrefs.GetInt($"Level{currentLevel}HighScore", 0);
 
-        if (currentScore > highScore)
+        if (PlayerPrefs.HasKey($"Level{currentLevel}HighScore"))
+        {
+            int highScore = PlayerPrefs.GetInt($"Level{currentLevel}HighScore");
+            if (currentScore < highScore)
+            {
+                PlayerPrefs.SetInt($"Level{currentLevel}HighScore", currentScore);
+            }
+        }
+        else
         {
             PlayerPrefs.SetInt($"Level{currentLevel}HighScore", currentScore);
         }
